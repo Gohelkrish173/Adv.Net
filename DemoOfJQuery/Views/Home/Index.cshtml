@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <button id="hideAll">Hide</button>
+</div>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <button id="hideAll">Hide</button>
+</div>
+
+<br />
+
+<form>
+    <label for="nameInput">Name: </label>
+    <input type="text" id="nameInput">
+    <label for="ageInput">Age: </label>
+    <input type="text" id="ageInput">
+    <button id="addRowButton">Add Row</button>
+</form>
+
+<div id="addedvalue">
+    h2>Selector: $("tr:even") and $("tr:odd")</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr class="highlight">
+            <td>Alice</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>30</td>
+        </tr>
+        <tr class="highlight">
+            <td>Charlie</td>
+            <td>35</td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    $(document).ready(() => {
+        // $("p").css("color","red");
+
+        var x = ["red","blue","green"]
+        var sanedo;
+            $(".text-center").css("color","blue")
+            $(":button").click(()=>{
+                // $("p").text("hello ------------");
+                $("div").css("border", "1px solid black");
+                // $("div").css("background", x[Math.floor(Math.random() * x.length)]);
+
+                sanedo = setInterval(() => {
+                    let rendomcolor = x[Math.floor(Math.random() * x.length)];
+                    $("div").css("background", rendomcolor);
+                }, 1000);
+            
+            })
+
+        $(":button").dblclick(() => {
+            clearInterval(sanedo);
+            $("p").text("hello ------------");
+            $("div").css("border", "0px solid black");
+        })
+
+        $('#nameInput').focus(function () {
+            $(this).css('background-color', 'yellow');
+        });
+
+        $('#nameInput').blur(function () {
+            $(this).css('background-color', '');
+        });
+
+        $("#nameInput").on("keyup", function () {
+            console.log("Key up: " + $(this).val());
+        });
+
+        // Event: Change
+        $("#ageInput").change(function () {
+            alert("Age changed to: " + $(this).val());
+        });
+
+        $('#addRowButton').click(function () {
+            var a = $('#nameInput').val();
+            var b = $('#ageInput').val();
+            $("table").append(`<tr class="table tr"><td>${a}</td><td>${b}</td></tr>`);
+        });
+
+        $("form").submit(function (event) {
+            event.preventDefault();
+            alert("Form submitted!");
+        });
+
+        
+    });
+</script>

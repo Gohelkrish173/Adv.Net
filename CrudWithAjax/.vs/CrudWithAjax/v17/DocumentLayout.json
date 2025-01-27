@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\College Work\\Advance DotNet\\Practice\\CrudWithAjax\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7A8596D8-4F81-4F53-88EB-30354938C688}|CrudWithAjax.csproj|d:\\college work\\advance dotnet\\practice\\crudwithajax\\views\\country\\countrytable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A8596D8-4F81-4F53-88EB-30354938C688}|CrudWithAjax.csproj|solutionrelative:views\\country\\countrytable.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A8596D8-4F81-4F53-88EB-30354938C688}|CrudWithAjax.csproj|d:\\college work\\advance dotnet\\practice\\crudwithajax\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A8596D8-4F81-4F53-88EB-30354938C688}|CrudWithAjax.csproj|solutionrelative:controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 250,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CountryTable.cshtml",
+              "DocumentMoniker": "D:\\College Work\\Advance DotNet\\Practice\\CrudWithAjax\\Views\\Country\\CountryTable.cshtml",
+              "RelativeDocumentMoniker": "Views\\Country\\CountryTable.cshtml",
+              "ToolTip": "D:\\College Work\\Advance DotNet\\Practice\\CrudWithAjax\\Views\\Country\\CountryTable.cshtml",
+              "RelativeToolTip": "Views\\Country\\CountryTable.cshtml",
+              "ViewState": "AgIAACwAAAAAAAAAAAAkwDsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-24T03:00:32.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CountryController.cs",
+              "DocumentMoniker": "D:\\College Work\\Advance DotNet\\Practice\\CrudWithAjax\\Controllers\\CountryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CountryController.cs",
+              "ToolTip": "D:\\College Work\\Advance DotNet\\Practice\\CrudWithAjax\\Controllers\\CountryController.cs",
+              "RelativeToolTip": "Controllers\\CountryController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAIwCMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T02:46:10.369Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

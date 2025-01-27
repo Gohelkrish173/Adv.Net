@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\College Work\\Advance DotNet\\Practice\\Practice_Web_API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F0D2C326-0C09-4351-A4C0-7FDBFA21D0C6}|Practice_Web_API.csproj|d:\\college work\\advance dotnet\\practice\\practice_web_api\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0D2C326-0C09-4351-A4C0-7FDBFA21D0C6}|Practice_Web_API.csproj|solutionrelative:controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0D2C326-0C09-4351-A4C0-7FDBFA21D0C6}|Practice_Web_API.csproj|d:\\college work\\advance dotnet\\practice\\practice_web_api\\data\\countryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0D2C326-0C09-4351-A4C0-7FDBFA21D0C6}|Practice_Web_API.csproj|solutionrelative:data\\countryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0D2C326-0C09-4351-A4C0-7FDBFA21D0C6}|Practice_Web_API.csproj|d:\\college work\\advance dotnet\\practice\\practice_web_api\\data\\cityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0D2C326-0C09-4351-A4C0-7FDBFA21D0C6}|Practice_Web_API.csproj|solutionrelative:data\\cityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CountryController.cs",
+              "DocumentMoniker": "D:\\College Work\\Advance DotNet\\Practice\\Practice_Web_API\\Controllers\\CountryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CountryController.cs",
+              "ToolTip": "D:\\College Work\\Advance DotNet\\Practice\\Practice_Web_API\\Controllers\\CountryController.cs",
+              "RelativeToolTip": "Controllers\\CountryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T18:09:53.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CityRepository.cs",
+              "DocumentMoniker": "D:\\College Work\\Advance DotNet\\Practice\\Practice_Web_API\\DATA\\CityRepository.cs",
+              "RelativeDocumentMoniker": "DATA\\CityRepository.cs",
+              "ToolTip": "D:\\College Work\\Advance DotNet\\Practice\\Practice_Web_API\\DATA\\CityRepository.cs",
+              "RelativeToolTip": "DATA\\CityRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAABzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T18:08:30.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CountryRepository.cs",
+              "DocumentMoniker": "D:\\College Work\\Advance DotNet\\Practice\\Practice_Web_API\\DATA\\CountryRepository.cs",
+              "RelativeDocumentMoniker": "DATA\\CountryRepository.cs",
+              "ToolTip": "D:\\College Work\\Advance DotNet\\Practice\\Practice_Web_API\\DATA\\CountryRepository.cs",
+              "RelativeToolTip": "DATA\\CountryRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAjwBcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T18:02:48.308Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+D:\College Work\Advance DotNet\Practice\DemoOfSelectionWork\bin\Debug\net8.0\DemoOfSelectionWork.exe
+D:\College Work\Advance DotNet\Practice\DemoOfSelectionWork\bin\Debug\net8.0\DemoOfSelectionWork.deps.json
+D:\College Work\Advance DotNet\Practice\DemoOfSelectionWork\bin\Debug\net8.0\DemoOfSelectionWork.runtimeconfig.json
+D:\College Work\Advance DotNet\Practice\DemoOfSelectionWork\bin\Debug\net8.0\DemoOfSelectionWork.dll
+D:\College Work\Advance DotNet\Practice\DemoOfSelectionWork\bin\Debug\net8.0\DemoOfSelectionWork.pdb
+D:\College Work\Advance DotNet\Practice\DemoOfSelectionWork\obj\Debug\net8.0\DemoOfSelectionWork.GeneratedMSBuildEditorConfig.editorconfig
+D:\College Work\Advance DotNet\Practice\DemoOfSelectionWork\obj\Debug\net8.0\DemoOfSelectionWork.AssemblyInfoInputs.cache
+D:\College Work\Advance DotNet\Practice\DemoOfSelectionWork\obj\Debug\net8.0\DemoOfSelectionWork.AssemblyInfo.cs
+D:\College Work\Advance DotNet\Practice\DemoOfSelectionWork\obj\Debug\net8.0\DemoOfSelectionWork.csproj.CoreCompileInputs.cache
+D:\College Work\Advance DotNet\Practice\DemoOfSelectionWork\obj\Debug\net8.0\DemoOfSelectionWork.dll
+D:\College Work\Advance DotNet\Practice\DemoOfSelectionWork\obj\Debug\net8.0\refint\DemoOfSelectionWork.dll
+D:\College Work\Advance DotNet\Practice\DemoOfSelectionWork\obj\Debug\net8.0\DemoOfSelectionWork.pdb
+D:\College Work\Advance DotNet\Practice\DemoOfSelectionWork\obj\Debug\net8.0\DemoOfSelectionWork.genruntimeconfig.cache
+D:\College Work\Advance DotNet\Practice\DemoOfSelectionWork\obj\Debug\net8.0\ref\DemoOfSelectionWork.dll

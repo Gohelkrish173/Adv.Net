@@ -1,0 +1,156 @@
+﻿@using System.Data;
+
+
+<div class="d-flex justify-content-end align-items-center">
+    <a class="btn btn-outline-primary" asp-controller="Country" asp-action="CountryAddEdit">
+        <i class="bi bi-plus-lg"></i>&nbsp;Add Country
+    </a>
+</div>
+
+@if (TempData["CountryInsertMsg"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["CountryInsertMsg"]
+    </div>
+}
+
+
+@* <div class="mb-3">
+     <input type="text" class="form-control" id="countrySearch" placeholder="Search Any">
+ </div>
+ *@
+
+@*
+<div class="" id="addCountryModal" tabindex="-1" aria-labelledby="addCountryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addCountryModalLabel">Add Country</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addCountryForm">
+                    <div class="mb-3">
+                        <label for="countryName" class="form-label">Country Name</label>
+                        <input type="text" class="form-control" id="countryName" name="CountryName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="countryCode" class="form-label">Country Code</label>
+                        <input type="text" class="form-control" id="countryCode" name="CountryCode" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Country</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+*@
+
+<div>
+    <p>Country Name</p>
+    <input placeholder="Enter CountryName"/>
+    
+    <p>Country Code</p>
+    <input placeholder="Enter CountryCode"/>
+</div>
+
+<table class="table table-hover table-header-fixed" id="countriesTable">
+    <thead>
+        <th>
+            <td>CountryID</td>
+            <td>CountryName</td>
+            <td>CountryCode</td>
+            <td>StateCount</td>
+            <td>edit</td>
+            <td>delete</td>
+        </th>
+    </thead>
+    <tbody class="">
+
+    </tbody>
+
+</table>
+
+@section Scripts {
+    <script>
+        // $(document).ready(function () {
+        //     loadCountries();
+        //     Filter functionality
+        //     $("#countrySearch").on("keyup", function () {
+        //         var value = $(this).val().toLowerCase();
+        //         $("#countryTable tr").filter(function () {
+        //             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        //         });
+        //     });
+        // }
+        $(document).ready(function () {
+            loadCountries();
+        });
+
+        function loadCountries(){
+            $.ajax({
+                url:'/Country/CountryData',
+                method: 'GET',
+                success : function(data){
+                    console.log(data);
+                    const tableBody = $('#countriesTable tbody');
+                    tableBody.empty();
+                    data.forEach(country => {
+                        tableBody.append(`
+                        <tr>
+                            <td>${country.countryID}</td>
+                            <td>${country.countryName}</td>
+                            <td>${country.countryCode}</td>
+                            <td>${country.stateCount}</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" onclick="editCountry(${country.CountryID},${country.CountryName},${country.CountryCode},${country.StateCount})">
+                                <i class="fas fa-edit"></i> Edit
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-warning btn-sm" onclick="editCountry(${country.CountryID})">
+                                <i class="fas fa-delete"></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                        `);
+                    });
+                },
+                error: function (error){
+                    console.error("Error loading countries:", error);
+                    alert("Failed to load countries. Please try again.");
+                }
+
+            });
+            }
+
+            function editCountry(id, name, code) {
+                $('#countryId').val(id);
+                $('#countryName').val(name);
+                $('#countryCode').val(code);
+            }
+            
+
+        // Add country form submission with AJAX
+            $("#addCountryForm").on("submit", function (e) {
+                e.preventDefault();
+
+                $.ajax({
+                    url: '@Url.Action("AddCountry", "Country")',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        if (response.success) {
+                            alert("Country added successfully!");
+                            location.reload(); // Reload the page to reflect changes
+                        } else {
+                            alert("Failed to add country: " + response.message);
+                        }
+                    },
+                    error: function () {
+                        alert("An error occurred. Please try again.");
+                    }
+                });
+            });
+    </script>
+}

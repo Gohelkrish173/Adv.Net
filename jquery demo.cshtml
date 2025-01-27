@@ -1,0 +1,256 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+@section Head {
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        hr {
+            margin: 20px 0;
+        }
+
+        .highlight {
+            background-color: #dff0d8;
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+}
+<script>
+    $(document).ready(function () {
+        // Select all elements
+        $("*").css("border", "1px solid blue");
+
+        // Highlight the clicked button
+        $("button").click(function () {
+            $(this).css("background-color", "yellow");
+        });
+
+        // Highlight elements with the "intro" class
+        $("p.intro").css("color", "green");
+
+        // Highlight the first paragraph
+        $("p:first").css("font-size", "20px");
+
+        // Highlight the first list item in the first ul
+        $("ul li:first").dblclick(
+            function () {
+                $("ul li:first").css("text-decoration", "underline");
+            }
+        );
+
+        // Highlight the first child of each ul
+        $("ul li:first-child").css("font-weight", "bold");
+
+        // Highlight links with an href attribute
+        $("[href]").css("color", "red");
+
+        // Highlight links with target='_blank'
+        $("a[target='_blank']").css("background-color", "lightblue");
+
+        // Highlight links with target!='_blank'
+        $("a[target!='_blank']").css("background-color", "lightgreen");
+
+        // Change the background color of all buttons
+        $("button").css("border", "2px solid orange");
+
+        // Alternate row colors in the table
+        $("tr:even").css("background-color", "#ffdddd");
+        $("tr:odd").css("background-color", "#ddffdd");
+
+        // Event: Hover over paragraph
+        $("p").hover(
+            function () {
+                $(this).css("background-color", "#f0f8ff");
+            },
+            function () {
+                $(this).css("background-color", "");
+            }
+        );
+
+        // Event: Double-click on table rows
+        $("tr").dblclick(function () {
+            $(this).css("background-color", "#ffc107");
+        });
+
+        // Event: Focus and blur on input fields
+        $("input").focus(function () {
+            $(this).css("background-color", "#e0f7fa");
+        });
+        $("input").blur(function () {
+            $(this).css("background-color", "green");
+        });
+
+        // Event: Mouseenter and Mouseleave
+        $("h2").on("mouseenter", function () {
+            $(this).css("color", "blue");
+        });
+        $("h2").on("mouseleave", function () {
+            $(this).css("color", "");
+        });
+
+        // Event: Keypress, Keydown, and Keyup
+        $("#nameInput").on("keypress", function () {
+            console.log("Key pressed: " + $(this).val());
+        });
+
+        $("#nameInput").on("keydown", function () {
+            console.log("Key down: " + $(this).val());
+        });
+
+        $("#nameInput").on("keyup", function () {
+            console.log("Key up: " + $(this).val());
+        });
+
+        // Event: Change
+        $("#ageInput").change(function () {
+            alert("Age changed to: " + $(this).val());
+        });
+
+        // Event: Submit
+        $("form").submit(function (event) {
+            event.preventDefault();
+            alert("Form submitted!");
+        });
+
+        // Add new row to the table
+        $("#addRowButton").click(function () {
+            const name = $("#nameInput").val();
+            const age = $("#ageInput").val();
+            if (name && age) {
+                const rowClass = $("table tr").length % 2 === 0 ? "highlight" : "";
+                $("table").append(`<tr class="${rowClass}"><td>${name}</td><td>${age}</td></tr>`);
+                $("#nameInput").val("");
+                $("#ageInput").val("");
+            } else {
+                alert("Please enter both name and age.");
+            }
+        });
+    });
+</script>
+
+<h1>jQuery Selectors and Events Demo</h1>
+
+<!-- $("*") -->
+<h2>Selector: $("*")</h2>
+<div class="highlight">Div 1</div>
+<span>Span 1</span>
+<p>Paragraph 1</p>
+<hr>
+
+<!-- $(this) -->
+<h2>Selector: $(this)</h2>
+<button onclick="alert('This element: ' + $(this).text())">Click Me</button>
+<hr>
+
+<!-- $("p.intro") -->
+<h2>Selector: $("p.intro")</h2>
+<p class="intro highlight">This is an introductory paragraph.</p>
+<hr>
+
+<!-- $("p:first") -->
+<h2>Selector: $("p:first")</h2>
+<p class="highlight">This is the first paragraph.</p>
+<p>This is another paragraph.</p>
+<hr>
+
+<!-- $("ul li:first") -->
+<h2>Selector: $("ul li:first")</h2>
+<ul>
+    <li class="highlight">First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ul>
+<hr>
+
+<!-- $("ul li:first-child") -->
+<h2>Selector: $("ul li:first-child")</h2>
+<ul>
+    <li class="highlight">First child</li>
+    <li>Second child</li>
+    <li>Third child</li>
+</ul>
+<hr>
+
+<!-- $("[href]") -->
+<h2>Selector: $("[href]")</h2>
+<a href="https://example.com" class="highlight">Link with href</a>
+<a>No href attribute</a>
+<hr>
+
+<!-- $("a[target='_blank']") -->
+<h2>Selector: $("a[target='_blank']")</h2>
+<a href="https://google.com" target="_blank" class="highlight">Open in new tab</a>
+<hr>
+
+<!-- $("a[target!='_blank']") -->
+<h2>Selector: $("a[target!='_blank']")</h2>
+<a href="https://bing.com" target="_self" class="highlight">Open in same tab</a>
+<hr>
+
+<!-- $(:button) -->
+<h2>Selector: $(:button)</h2>
+<button class="highlight">Button 1</button>
+<input type="button" value="Button 2" class="highlight">
+<input type="submit" value="Submit">
+<hr>
+
+<!-- $("tr:even") and $("tr:odd") -->
+<h2>Selector: $("tr:even") and $("tr:odd")</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr class="highlight">
+        <td>Alice</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>Bob</td>
+        <td>30</td>
+    </tr>
+    <tr class="highlight">
+        <td>Charlie</td>
+        <td>35</td>
+    </tr>
+</table>
+
+<h3>Add a New Row</h3>
+<form>
+    <label for="nameInput">Name: </label>
+    <input type="text" id="nameInput">
+    <label for="ageInput">Age: </label>
+    <input type="text" id="ageInput">
+    <button id="addRowButton">Add Row</button>
+</form>
+<hr>
+
+
+
